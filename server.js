@@ -18,7 +18,7 @@ import http from 'http';
 import { Server as SocketIO } from "socket.io";
 import { Command } from 'commander';
 import * as url from 'url';
-const job = require('./cron.js')
+import job from './cron';
 
 job.start();
 
