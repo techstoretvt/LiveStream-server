@@ -16,9 +16,8 @@
 import express from 'express';
 import http from 'http';
 import { Server as SocketIO } from "socket.io";
-import { Command } from 'commander';
 import * as url from 'url';
-import job from './cron';
+import { job } from './cron.config.js'
 
 job.start();
 

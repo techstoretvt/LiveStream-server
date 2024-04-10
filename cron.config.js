@@ -1,9 +1,9 @@
 // Cron job to hit endpoint every 14 sec to keep backend alive always
-const cron = require('cron');
-const https = require('https');
+import * as cron from 'cron';
+import https from 'https';
 const backendUrl = "https://livestream-server.onrender.com";
 
-const job = new cron.CronJob('*/13 * * * *', function () {
+export const job = new cron.CronJob('*/13 * * * *', function () {
     // This function will be executed every 14 minutes.
     console.log("--------------------------");
     console.log("Restarting server");
@@ -26,4 +26,4 @@ const job = new cron.CronJob('*/13 * * * *', function () {
         })
 });
 // Export the cron job.
-module.exports = job
+// module.exports = { job }
